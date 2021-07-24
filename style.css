@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #4075A0;
+}
+
+p {
+    padding-top: 16vh;
+    margin-bottom: 10px;
+    text-shadow: 0px 5px #295C7f;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Roboto;
+    color: #FFF;
+    font-size: 30px;
+}
+
+.contact-form {
+    align-self: center;
+    background-color: #315b7e;
+    width: 500px;
+    height: 460px;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    padding-top: 5px;
+    border: 3px solid #75b6eb;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+#name, #subject, #mail {
+    align-content: center;
+    position: block;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #92c3eb;
+    opacity: .7;
+}
+
+#message {
+    align-content: center;
+    position: block;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #92c3eb;
+    opacity: .7;
+}
+
+#submit {
+    align-content: center;
+    position: block;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    width: 70%;
+    background-color: #92c3eb ;
+}
+
+#submit:hover {
+    background-color: #75b6eb;
+  }
