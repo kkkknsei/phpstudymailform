@@ -10,8 +10,12 @@ https://gist.github.com/giovanigenerali/39efe8760f84ed74b44a31be1ace27e7
 
 Run it on localhost:xxxx with "php -S localhost:xxxx" using a terminal.
 Point who will receive the message on $mailTo variable.
-It doesn't mind/treat errors, the main focus here was to try the mail() function
-and set a template for future development.
+
+This script handles:
+    - Empty inputs
+    - Invalid inputs
+    - Invalid e-mail format
+    - Basic inject attempt
 */
 
 if (isset($_POST['submit'])) {
@@ -19,6 +23,20 @@ if (isset($_POST['submit'])) {
         $subject = $_POST['subject'];
         $mailFrom = $_POST['mail'];
         $message = $_POST['message'];
+
+        if(empty($_POST['name'])  ||
+        empty($_POST['mail']) ||
+        empty($_POST['message']) ||
+        empty($_POST['subject']))
+        {
+            echo "All fields are required.<br />Come back and try again.";
+        exit;
+        }
+
+        if (!filter_var($mailFrom, FILTER_VALIDATE_EMAIL)) {
+            echo "Bad e-mail input.<br />Come back and try again.";
+            exit;
+            }
 
         $mailTo = "";
         $headers = "From: ".$mailFrom;
